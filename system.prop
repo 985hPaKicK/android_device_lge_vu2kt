@@ -1,0 +1,111 @@
+#
+# system.prop for vu2kt
+#
+rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libargs=-d /dev/smd0
+ro.telephony.ril_class=QualcommSharedRIL
+ro.vendor.extension_library=/system/lib/libqc-opt.so
+ro.baseband.arch=msm
+ro.config.lte=true
+ro.telephony.default_network=9
+telephony.lteOnGsmDevice=1
+ro.ril.shutdown=true
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+
+persist.rild.nitz_plmn=
+persist.rild.nitz_long_ons_0=
+persist.rild.nitz_long_ons_1=
+persist.rild.nitz_long_ons_2=
+persist.rild.nitz_long_ons_3=
+persist.rild.nitz_short_ons_0=
+persist.rild.nitz_short_ons_1=
+persist.rild.nitz_short_ons_2=
+persist.rild.nitz_short_ons_3=
+#ril.subscription.types=NV,RUIM
+DEVICE_PROVISIONED=1
+debug.sf.hw=1
+debug.egl.hw=1
+debug.composition.type=dyn
+debug.compbypass.enable=1
+
+sys.lge.core.manual=0
+persist.radio.apm_sim_not_pwdn=1
+
+ro.sf.lcd_density=320
+
+#LGE_CHANGE_E kyungmin.jun@lge.com 2011.12.19  LPA Mode off ==> 2012.02.-1 LPA Mode ON
+#lpa.use-stagefright=true
+
+#system props for the MM modules
+
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+mmp.enable.3g2=true
+
+#
+# system props for the data modules
+#
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+
+#system props for time-services
+persist.timed.enable=true
+
+# System props for audio
+persist.audio.fluence.mode=endfire
+persist.audio.vr.enable=false
+persist.audio.handset.mic=analog
+
+# System prop to select audio resampler quality
+af.resampler.quality=255
+
+#
+# system prop for opengles version
+#
+# 131072 is decimal for 0x20000 to report version 2
+ro.opengles.version=131072
+
+#
+# system prop for Bluetooth
+ro.qualcomm.bluetooth.hfp.wbs=true
+ro.qualcomm.bt.hci_transport=smd
+ro.bluetooth.request.master=false
+ro.bluetooth.remote.autoconnect=true
+
+#
+# System prop for switching gps driver to qmi
+#
+persist.gps.qmienabled=true
+
+#
+# System property for cabl
+#
+ro.qualcomm.cabl=2
+
+#
+# System prop for sending transmit power request to RIL during WiFi hotspot on/off
+#
+ro.ril.transmitpower=true
+
+ro.hwui.text_cache_width=2048
+ro.qc.sdk.camera.facialproc=false
+ro.qc.sdk.sensors.gestures=false
+ro.nfc.port=I2C
+persist.data_netmgrd_mtu=1450
+ro.config.vc_call_vol_steps=9
+ro.config.vc_call_vol_default=6
+ro.hdmi.enable=true
+com.qc.hardware=true
+com.qc.hdmi_out=true
+#lpa.decode=true
+
+wlan.chip.vendor=brcm
+wlan.chip.version=bcm4334
+wifi.interface=wlan0
+ro.crypto.fuse_sdcard=true
+dalvik.vm.dexopt-data-only=1
